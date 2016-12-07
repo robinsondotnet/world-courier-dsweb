@@ -269,3 +269,26 @@ $app->post('/pedidos/{id}/delete', function ($request, $response, $args) {
 });
 
 
+// STATUS
+
+$app->get('/status', function ($request, $response, $args) {
+
+    $status = $this->db->table('status_pedido')->get();
+
+    return $this->renderer->render($response, 'status/index.phtml', ['status' => json_decode($status, true)]);
+});
+
+$app->get('/status/create', function ($request, $response, $args) {
+
+    return $this->renderer->render($response, 'status/create.phtml',$args);
+});
+
+$app->post('/status/create', function ($request, $response, $args) {
+
+    $this->logger->info("Creando Status");
+    $parsedBody = $request->getParsedBody();
+    $parsedBody["StatusID"] = substr(uniqid('', true), -4);
+    $pedido = $this->db->table('status_pedido')->insert($parsedBody);
+
+    return $response->withRedirect('/status');
+});
