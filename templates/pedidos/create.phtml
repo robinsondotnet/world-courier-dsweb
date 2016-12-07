@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>World Courier - Pedidos</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <!-- Semantic UI Library Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+</head>
+<body>
+
+<div class="ui container">
+    <br>
+    <div class="ui secondary menu">
+        <div class="header item">World Courier</div>
+        <a href="/clientes" class=" item">
+            Clientes
+        </a>
+        <a class="item">
+            Empleados
+        </a>
+        <a class="item">
+            Tarifas
+        </a>
+        <a href="/pedidos" class="active item">
+            Pedidos
+        </a>
+        <div class="right menu">
+            <a href="/logout" class="ui item">
+                Logout
+            </a>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    <br>
+    <div class="ui grid">
+        <div class="twelve wide column">
+            <form class="ui form" method="post">
+                <div class="field">
+                    <label>Cliente</label>
+                  <div id="ClienteID" class="ui search selection dropdown">
+                  <input type="hidden" name="ClienteID">
+                    <div class="text">Search</div>
+                </div>
+                <div class="field">
+                    <label>Origen</label>
+
+                    <select name="Origen" size="1">
+            	  <option value="" class="ui search selection dropdown" selected="selected">Selecciona un Distrito</option>
+                        <option value="02">ANCON</option>
+                            <option value="03">ATE</option>
+                            <option value="04">BARRANCO</option>
+                            <option value="05">BREÑA</option>
+                            <option value="06">CARABAYLLO</option>
+                            <option value="07">CHACLACAYO</option>
+                            <option value="08">CHORRILLOS</option>
+                            <option value="09">CIENEGUILLA</option>
+                            <option value="10">COMAS</option>
+                            <option value="11">EL AGUSTINO</option>
+                            <option value="12">INDEPENDENCIA</option>
+                            <option value="13">JESUS MARIA</option>
+                            <option value="14">LA MOLINA</option>
+                            <option value="15">LA VICTORIA</option>
+                            <option value="01">LIMA</option>
+                            <option value="16">LINCE</option>
+                            <option value="17">LOS OLIVOS</option>
+                            <option value="18">LURIGANCHO</option>
+                            <option value="19">LURIN</option>
+                            <option value="20">MAGDALENA DEL MAR</option>
+                            <option value="21">MAGDALENA VIEJA</option>
+                            <option value="22">MIRAFLORES</option>
+                            <option value="23">PACHACAMAC</option>
+                            <option value="24">PUCUSANA</option>
+                            <option value="25">PUENTE PIEDRA</option>
+                            <option value="26">PUNTA HERMOSA</option>
+                            <option value="27">PUNTA NEGRA</option>
+                            <option value="28">RIMAC</option>
+                            <option value="29">SAN BARTOLO</option>
+                            <option value="30">SAN BORJA</option>
+                            <option value="31">SAN ISIDRO</option>
+                            <option value="32">SAN JUAN DE LURIGANCHO</option>
+                            <option value="33">SAN JUAN DE MIRAFLORES</option>
+                            <option value="34">SAN LUIS</option>
+                            <option value="35">SAN MARTIN DE PORRES</option>
+                            <option value="36">SAN MIGUEL</option>
+                            <option value="37">SANTA ANITA</option>
+                            <option value="38">SANTA MARIA DEL MAR</option>
+                            <option value="39">SANTA ROSA</option>
+                            <option value="40">SANTIAGO DE SURCO</option>
+                            <option value="41">SURQUILLO</option>
+                            <option value="42">VILLA EL SALVADOR</option>
+                            <option value="43">VILLA MARIA DEL TRIUNFO</option>
+                    </select>
+
+                </div>
+                <div class="field">
+                    <label>Direccion Origen</label>
+                   <input type="text" name="Direccion_origen" placeholder="Direccion Origen">
+                </div>
+                <div class="field">
+                    <label>Destino</label>
+                    <select name="Destino" size="1">
+            	  <option value="" class="ui search selection dropdown" selected="selected">Selecciona un Distrito</option>
+                        <option value="02">ANCON</option>
+                            <option value="03">ATE</option>
+                            <option value="04">BARRANCO</option>
+                            <option value="05">BREÑA</option>
+                            <option value="06">CARABAYLLO</option>
+                            <option value="07">CHACLACAYO</option>
+                            <option value="08">CHORRILLOS</option>
+                            <option value="09">CIENEGUILLA</option>
+                            <option value="10">COMAS</option>
+                            <option value="11">EL AGUSTINO</option>
+                            <option value="12">INDEPENDENCIA</option>
+                            <option value="13">JESUS MARIA</option>
+                            <option value="14">LA MOLINA</option>
+                            <option value="15">LA VICTORIA</option>
+                            <option value="01">LIMA</option>
+                            <option value="16">LINCE</option>
+                            <option value="17">LOS OLIVOS</option>
+                            <option value="18">LURIGANCHO</option>
+                            <option value="19">LURIN</option>
+                            <option value="20">MAGDALENA DEL MAR</option>
+                            <option value="21">MAGDALENA VIEJA</option>
+                            <option value="22">MIRAFLORES</option>
+                            <option value="23">PACHACAMAC</option>
+                            <option value="24">PUCUSANA</option>
+                            <option value="25">PUENTE PIEDRA</option>
+                            <option value="26">PUNTA HERMOSA</option>
+                            <option value="27">PUNTA NEGRA</option>
+                            <option value="28">RIMAC</option>
+                            <option value="29">SAN BARTOLO</option>
+                            <option value="30">SAN BORJA</option>
+                            <option value="31">SAN ISIDRO</option>
+                            <option value="32">SAN JUAN DE LURIGANCHO</option>
+                            <option value="33">SAN JUAN DE MIRAFLORES</option>
+                            <option value="34">SAN LUIS</option>
+                            <option value="35">SAN MARTIN DE PORRES</option>
+                            <option value="36">SAN MIGUEL</option>
+                            <option value="37">SANTA ANITA</option>
+                            <option value="38">SANTA MARIA DEL MAR</option>
+                            <option value="39">SANTA ROSA</option>
+                            <option value="40">SANTIAGO DE SURCO</option>
+                            <option value="41">SURQUILLO</option>
+                            <option value="42">VILLA EL SALVADOR</option>
+                            <option value="43">VILLA MARIA DEL TRIUNFO</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Direccion Destino</label>
+                   <input type="text" name="Direccion_destino" placeholder="Direccion Destino">
+                </div>
+                <div class="field">
+                    <label>Empleado</label>
+                  <div id="EmpleadoID" class="ui search selection dropdown">
+                  <input type="hidden" name="EmpleadoID">
+                    <div class="text">Search</div>
+                </div>
+
+                <button class="ui button red" type="submit">Grabar</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+<!-- Semantc UI JS -->
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="/assets/js/main.js" ></script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>World Courier - Clientes</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <!-- Semantic UI Library Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+</head>
+<body>
+
+<div class="ui container">
+    <br>
+    <div class="ui secondary menu">
+        <div class="header item">World Courier</div>
+        <a class="active item">
+            Clientes
+        </a>
+        <a class="item">
+            Empleados
+        </a>
+        <a class="active item">
+            Tarifas
+        </a>
+        <div class="right menu">
+            <a href="/logout" class="ui item">
+                Logout
+            </a>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    <br>
+    <div class="ui grid">
+        <div class="twelve wide column">
+            <form class="ui form" method="post">
+                <div class="field">
+                    <label>Nombres</label>
+                    <input type="text" name="Nombre" value="<?= $cliente->Nombre ?>" placeholder="Nombres">
+                </div>
+                <div class="field">
+                    <label>Apellido Paterno</label>
+                    <input type="text" name="Apellido_paterno" value="<?= $cliente->Apellido_paterno ?>" placeholder="Apellido Paterno">
+                </div>
+                <div class="field">
+                    <label>Apellido Materno</label>
+                    <input type="text" name="Apellido_materno" value="<?= $cliente->Apellido_materno ?>" placeholder="Apellido Materno">
+                </div>
+                <div class="field">
+                    <label>DNI</label>
+                    <input type="text" name="DNI" value="<?= $cliente->DNI ?>" placeholder="DNI">
+                </div>
+                <button class="ui button red" type="submit">Grabar</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+<!-- Semantc UI JS -->
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+</html>
