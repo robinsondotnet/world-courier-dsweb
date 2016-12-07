@@ -10,11 +10,11 @@ En nuestro proyecto hemos escodigo como tema un sistema web para una empresa Cou
 
 ### World Courier
 
-Es un servicio de entrega puerta a puerta segura, rápida, confiable con un cubrimiento de más de doce (12) distritos de la ciudad de Lima Metropolitana y en el extranjero. Garantizando un tiempo record en cada entrega.
+Es un servicio de entrega puerta a puerta segura, rápida, confiable con un cubrimiento de más de doce (12) distritos de la ciudad de Lima Metropolitana.
 
-### Definición Mision del Sitio
+### Definición del Sitio
 
-Se pretende hacer un sistema online donde cada usuario pueda programar recojo y envío de su paquete, además de consultar el estado de su envío en tránsito. Por otro lado la consulta de precios y tarifas también podrán solicitarla de forma online
+Se pretende hacer un sistema online donde los empleados de WorldCourier puedan registrar pedidos desde cualquier ubicacion. Por otro lado la consulta de precios y tarifas donde podarn informar a los clientes.
 
 ### TRANSACCIONES :
 
@@ -48,9 +48,7 @@ c) Consulta de tarifa
 
 d) Solicitud de recojo
 
-e) Reportes
-
-f) Generacion de pedidos
+e) Generacion de pedidos
 
 ### Arquitectura
 
